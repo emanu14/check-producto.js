@@ -1,11 +1,20 @@
-require("dotenv").config();
+const express = require('express');
+const dotenv = require('dotenv');
+const path = require('path');
+const mainRouter = require('./src/routes/main.router');
+const productosRouter = require('./src/routes/productos.router');
 
-const express = require("express");
+dotenv.config();
+
 const app = express();
 
-app.get('/', (req, res) => {
-    res.send('Hola mundo!');
-});
+app.use(express.static(path.join(__dirname, "public")));
+
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'src/views'));
+
+app.use(mainRouter);
+app.use(productosRouter);
 
 const PORT = process.env.PORT || 3000;
 
