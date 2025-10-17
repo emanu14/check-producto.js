@@ -1,0 +1,83 @@
+.container {
+  max-width: 25%;
+  margin: 100px auto;
+  padding: 50px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.alt-link {
+  text-align: center;
+  margin: 20px;
+  color: #333;
+}
+
+.alt-link a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.alt-link a:hover {
+  text-decoration: underline;
+}
+
+form .form-grupo {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  color: #333;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 11px;
+  cursor: pointer;
+}
+
+.toggle-password img {
+  width: 20px;
+}
+
+form .boton-enviar {
+  width: 100%;
+  padding: 10px;
+  background-color: #3b82f6;
+  margin-top: 5px;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: color 0.1s ease;
+}
+
+form .boton-enviar:disabled {
+  background-color: #9ca3af;
+  cursor: default;
+  opacity: 0.6;
+}
+
+.boton-enviar:hover:not(:disabled) {
+  background-color: #007bff;
+}
+
+.mensaje-error {
+  font-size: 0.85rem;
+  display: none;
+}
