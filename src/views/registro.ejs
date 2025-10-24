@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="/css/auth.css">
+
+<div class="container">
+
+  <h1>Crea tu cuenta de CheckProducto</h1>
+
+  <p class="alt-link"> ¿Ya tienes una cuenta? 
+    <a href="/login">Inicia Sesión &#8599</a>
+  </p>
+
+  <form id="registro-form" action="/registro" method="POST">
+
+    <div class="form-grupo">
+
+      <input type="text" id="email" name="email" placeholder="Correo electrónico" />
+
+      <div id="mensaje-error-correo-arroba" class="mensaje-error">
+        <p>Este correo no es válido. Ingresa una dirección válida de correo.</p>
+      </div>
+
+      <div id="mensaje-error-correo-usado" class="mensaje-error">
+        <p>Este correo electrónico ya está asociado a una cuenta. Intenta con uno diferente.</p>
+      </div>
+
+    </div>
+
+    <div class="form-grupo">
+
+      <input type="password" id="password" name="password" placeholder="Contraseña" />
+
+      <span id="toggle-password" class="toggle-password">
+        <img id="eye-icon" src="/images/eye.png" alt="Show password" />
+      </span>
+
+      <div id="mensaje-error-password-length" class="mensaje-error">
+        <p>La contraseña debe tener al menos 8 caracteres.</p>
+      </div>
+      
+    </div>
+
+    <div class="mensaje-error">
+      <p>No se pudo crear la cuenta por un problema del servidor. Inténtalo de nuevo más tarde.</p>
+    </div>
+
+    <button id="boton-enviar" type="submit" class="boton-enviar" disabled>
+      Registrarse
+    </button>
+
+  </form>
+</div>
+
+<script type="module" src="/js/registro.js"></script>

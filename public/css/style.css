@@ -1,0 +1,50 @@
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  padding: 25px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+nav .inicio {
+  display: flex;
+  align-items: center;
+  padding-left: 15%;
+  gap: 70px;
+}
+
+nav .inicio .logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #3b82f6;
+  letter-spacing: 0.05rem;
+  text-decoration: none;
+}
+
+nav .nav-links {
+  display: flex;
+  padding-right: 15%;
+  gap: 50px;
+}
+
+nav .nav-links a {
+  display: none;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.1s ease;
+}
+
+nav a:hover {
+  color: #3b82f6;
+}

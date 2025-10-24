@@ -1,0 +1,28 @@
+body {
+    background-color: #fdfdfd;
+}
+
+.container {
+    max-width: 40%;
+    text-align: center;
+    margin: 100px auto;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0px 10px rgba(0,0,0,0.1);
+    color: #333;
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.container p {
+    font-size: 0.95rem;
+    margin: 5px;
+}
+
+.container #correo-placeholder {
+    font-weight: 700;
+}

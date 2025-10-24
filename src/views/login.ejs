@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="/css/auth.css">
+
+<div id="container" class="container" style="display:none">
+
+  <h1>Inicia sesión en CheckProducto</h1>
+
+  <p class="alt-link">
+    ¿No tienes una cuenta?
+    <a href="/registro">Crea tu cuenta &#8599</a>
+  </p>
+
+  <form id="login-form" action="/login" method="POST">
+
+    <div class="form-grupo">
+      <input type="text" id="email" name="email" placeholder="Correo electrónico" />
+      <div id="mensaje-error-correo-desconocido" class="mensaje-error">
+        <p>Este correo no está asociado a ninguna cuenta. Intenta con uno diferente.</p>
+      </div>
+    </div>
+
+    <div class="form-grupo">
+      <input type="password" id="password" name="password" placeholder="Contraseña" />
+      <span id="toggle-password" class="toggle-password">
+        <img id="eye-icon" src="/images/eye.png" alt="Show password" />
+      </span>
+      <div id="mensaje-error-password-incorrecto" class="mensaje-error">
+        <p>Contraseña incorrecta. Inténtalo de nuevo.</p>
+      </div>
+        <div id="mensaje-error-limite-intentos" class="mensaje-error">
+          <p>Límite de intentos alcanzado. Inténtalo de nuevo en 5 minutos.</p>
+        </div>
+    </div>
+
+    <button id="boton-enviar" type="submit" class="boton-enviar">
+      Iniciar Sesión
+    </button>
+
+  </form>
+</div>
+
+<script type="module" src="/js/login.js"></script>

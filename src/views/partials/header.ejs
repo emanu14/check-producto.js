@@ -1,0 +1,47 @@
+<header>
+    <nav>
+        <div class="inicio">
+            <a class="logo" href="/">CheckProducto</a>
+            <a href="/">Inicio</a>
+        </div>
+        <div class="nav-links">
+            <a id="signup" href="/registro">Crea tu cuenta</a>
+            <a id="login" href="/login">Inicia Sesión</a>
+            <a id="logout" href="/">Cerrar sesión</a>
+            <a id="cuenta" href="/cuenta">Cuenta</a>
+        </div>
+    </nav>
+</header>
+
+<script type="module">
+    import { auth, onAuthStateChanged, signOut } from "/js/firebase-config.js";
+
+    const signup = document.getElementById("signup");
+    const login = document.getElementById("login");
+    const logout = document.getElementById("logout");
+    const cuenta = document.getElementById("cuenta");
+    
+    onAuthStateChanged(auth, async (user) => {
+        if (user) {
+            login.style.display = "none";
+            signup.style.display = "none";
+            cuenta.style.display = "inline-block";
+            logout.style.display = "inline-block";
+        } else {
+            login.style.display = "inline-block";
+            signup.style.display = "inline-block";
+            cuenta.style.display = "none";
+            logout.style.display = "none";
+        }
+    });
+
+    logout.addEventListener("click", async () => {
+        await fetch("/logout", { 
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email: sessionStorage.getItem("correoUsuario") })
+        });
+        await signOut(auth);
+    });
+
+</script>
